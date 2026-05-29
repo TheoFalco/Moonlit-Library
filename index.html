@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonlit Library — Online Bookstore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER & NAV ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-moon">☽</span> Moonlit<span> Library</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#featured">Books</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+          <span id="theme-icon">☽</span>
+        </button>
+        <button class="btn-icon cart-btn" id="cart-btn" aria-label="View cart">
+          🛒 <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO / WELCOME ===== -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-label">Welcome to Moonlit Library</p>
+        <h1>Where stories<br /><em>come alive</em> at night.</h1>
+        <p class="hero-sub">A curated collection of timeless classics and modern masterpieces — handpicked for the curious mind.</p>
+        <a href="#featured" class="btn-primary">Browse Books</a>
+      </div>
+      <div class="hero-decor" aria-hidden="true">
+        <div class="decor-circle c1"></div>
+        <div class="decor-circle c2"></div>
+        <div class="decor-circle c3"></div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED BOOKS ===== -->
+    <section class="books-section" id="featured">
+      <div class="section-header">
+        <h2>Featured Books</h2>
+        <p>Click on any book to read more about it.</p>
+      </div>
+
+      <!-- Carousel wrapper -->
+      <div class="carousel" id="books-carousel" aria-label="Featured books carousel">
+
+        <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous book">&#8592;</button>
+
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track" id="carousel-track">
+
+            <!-- BOOK 1 -->
+            <article class="book-card" data-title="1984" data-author="George Orwell">
+              <div class="book-cover" style="background: linear-gradient(135deg,#1a1a2e,#16213e);">
+                <img src="images/1984.jpg" alt="Book cover for 1984" />
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">1984</h3>
+                <p class="book-author">George Orwell</p>
+                <div class="book-desc" hidden>
+                  <p>Set in a totalitarian future society, this novel follows Winston Smith as he struggles against constant surveillance, censorship, and the oppressive rule of Big Brother. A chilling warning about power and control.</p>
+                </div>
+                <div class="book-actions">
+                  <button class="btn-desc" aria-expanded="false">Read More</button>
+                  <button class="btn-cart" data-title="1984" data-price="9.99">🛒 Add — $9.99</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- BOOK 2 -->
+            <article class="book-card" data-title="The Secret History" data-author="Donna Tartt">
+              <div class="book-cover" style="background: linear-gradient(135deg,#0d2137,#1a3a5c);">
+                <img src="images/the_secret_history.jpg" alt="Book cover for The Secret History" />
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">The Secret History</h3>
+                <p class="book-author">Donna Tartt</p>
+                <div class="book-desc" hidden>
+                  <p>At an elite college in New England, a group of classics students becomes entangled in a dangerous secret that leads to murder. A haunting exploration of beauty, obsession, and morality.</p>
+                </div>
+                <div class="book-actions">
+                  <button class="btn-desc" aria-expanded="false">Read More</button>
+                  <button class="btn-cart" data-title="The Secret History" data-price="10.99">🛒 Add — $10.99</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- BOOK 3 -->
+            <article class="book-card" data-title="The Night Circus" data-author="Erin Morgenstern">
+              <div class="book-cover" style="background: linear-gradient(135deg,#1a0a2e,#2d1b4e);">
+                <img src="images/the_night_circus.jpg" alt="Book cover for The Night Circus" />
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">The Night Circus</h3>
+                <p class="book-author">Erin Morgenstern</p>
+                <div class="book-desc" hidden>
+                  <p>A mysterious circus appears without warning, opening only at night. Behind its magic, two young illusionists are bound to a fierce competition that will change their lives forever.</p>
+                </div>
+                <div class="book-actions">
+                  <button class="btn-desc" aria-expanded="false">Read More</button>
+                  <button class="btn-cart" data-title="The Night Circus" data-price="12.99">🛒 Add — $12.99</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- BOOK 4 -->
+            <article class="book-card" data-title="Pride and Prejudice" data-author="Jane Austen">
+              <div class="book-cover" style="background: linear-gradient(135deg,#12103a,#2e2a6e);">
+                <img src="images/pride_and_prejudice.jpg" alt="Book cover for Pride and Prejudice" />
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">Pride and Prejudice</h3>
+                <p class="book-author">Jane Austen</p>
+                <div class="book-desc" hidden>
+                  <p>The story of Elizabeth Bennet and the proud Mr. Darcy navigating manners, morality, and marriage in Regency England. Austen's wit and social commentary remain unmatched.</p>
+                </div>
+                <div class="book-actions">
+                  <button class="btn-desc" aria-expanded="false">Read More</button>
+                  <button class="btn-cart" data-title="Pride and Prejudice" data-price="8.99">🛒 Add — $8.99</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- BOOK 5 -->
+            <article class="book-card" data-title="The Shadow of the Wind" data-author="Carlos Ruiz Zafón">
+              <div class="book-cover" style="background: linear-gradient(135deg,#0a0a1a,#1a1a3e);">
+                <img src="images/the_shadow_of_the_wind.jpg" alt="Book cover for The Shadow of the Wind" />
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">The Shadow of the Wind</h3>
+                <p class="book-author">Carlos Ruiz Zafón</p>
+                <div class="book-desc" hidden>
+                  <p>In post-war Barcelona, a young boy discovers a forgotten novel that draws him into a mystery of lost authors, hidden secrets, and dangerous intrigue.</p>
+                </div>
+                <div class="book-actions">
+                  <button class="btn-desc" aria-expanded="false">Read More</button>
+                  <button class="btn-cart" data-title="The Shadow of the Wind" data-price="12.99">🛒 Add — $12.99</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- BOOK 6 -->
+            <article class="book-card" data-title="Dracula" data-author="Bram Stoker">
+              <div class="book-cover" style="background: linear-gradient(135deg,#12103a,#2e2a6e);">
+                <img src="images/dracula.jpg" alt="Book cover for Dracula" />
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">Dracula</h3>
+                <p class="book-author">Bram Stoker</p>
+                <div class="book-desc" hidden>
+                  <p>When Count Dracula travels from Transylvania to England, a group of determined individuals must confront the ancient vampire before darkness spreads across the land.</p>
+                </div>
+                <div class="book-actions">
+                  <button class="btn-desc" aria-expanded="false">Read More</button>
+                  <button class="btn-cart" data-title="Dracula" data-price="10.99">🛒 Add — $10.99</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- BOOK 7 -->
+            <article class="book-card" data-title="Frankenstein" data-author="Mary Shelley">
+              <div class="book-cover" style="background: linear-gradient(135deg,#12103a,#2e2a6e);">
+                <img src="images/frankenstein.jpg" alt="Book cover for Frankenstein" />
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">Frankenstein</h3>
+                <p class="book-author">Mary Shelley</p>
+                <div class="book-desc" hidden>
+                  <p>A brilliant scientist creates life through an ambitious experiment, only to be haunted by the consequences of his creation. A powerful tale of ambition, responsibility, and humanity.</p>
+                </div>
+                <div class="book-actions">
+                  <button class="btn-desc" aria-expanded="false">Read More</button>
+                  <button class="btn-cart" data-title="Frankenstein" data-price="10.99">🛒 Add — $10.99</button>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /.carousel-track -->
+        </div><!-- /.carousel-track-wrapper -->
+
+        <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next book">&#8594;</button>
+
+      </div><!-- /.carousel -->
+
+      <div class="carousel-dots" id="carousel-dots" aria-label="Book navigation dots"></div>
+
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <div class="contact-text">
+          <h2>Get in Touch</h2>
+          <p>Have a question, a recommendation, or just want to talk books? We'd love to hear from you.</p>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" />
+            <span class="form-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?"></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <p class="form-success" id="form-success" hidden>✓ Message sent! We'll get back to you soon.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">☽ Moonlit Library</p>
+      <p class="footer-copy">© 2026 Moonlit Library. All rights reserved.</p>
+      <p class="footer-time" id="footer-time"></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
