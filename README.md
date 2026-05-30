@@ -7,11 +7,11 @@
 
 ## Group Members
 
-| Name              | Student ID |
-|-------------------|------------|
-| Théo Falcomer     |  26170052  |
-|                   |            |
-|                   |            |
+| Name                | Student ID |
+|---------------------|------------|
+| Théo Falcomer       |  26170052  |
+| Paul-joseph Yamben  |  26170050  |
+| Omar Braik          |  26170073  |
 
 
 ---
@@ -38,11 +38,11 @@ Moonlit Library is a fully functional online bookstore web application built wit
 
 | Task                                  |   Member   |
 |---------------------------------------|------------|
-| HTML structure & semantic markup      |            |
-| CSS styling & responsive design       |            |
-| JavaScript — Carousel & Dark mode     |            |
-| JavaScript — Form validation & Footer |            |
-| Images, README & final review         |            |
+| HTML structure & semantic markup      |  Omar      |
+| CSS styling & responsive design       |  Omar      |
+| JavaScript — Carousel & Dark mode     |  Theo      |
+| JavaScript — Form validation & Footer |  Theo      |
+| Images, README & final review         |Paul-joseph |
 
 ---
 
